@@ -1,0 +1,21 @@
+{
+  "name": "scraper-svc",
+  "version": "1.0.0",
+  "description": "Service responsible for fetching TV show and cast information and persisting in storage",
+  "main": "index.js",
+  "repository": "https://github.com/m-sz/tvcast-service.git",
+  "author": "Maciej Szmida <maciej_szmida@epam.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "tslint --project ./tsconfig.json",
+    "build": "yarn run lint && tsc",
+    "start": "node build/index.js"
+  },
+  "dependencies": {
+    "typescript": "^3.0.1"
+  },
+  "devDependencies": {
+    "tslint": "^5.11.0",
+    "tslint-config-airbnb": "^5.10.0"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "tvcast-services",
+  "version": "1.0.0",
+  "description": "This project will provide the cast of all TV shows.",
+  "main": "index.js",
+  "repository": "https://github.com/m-sz/tvcast-service.git",
+  "author": "Maciej Szmida <maciej_szmida@epam.com>",
+  "license": "MIT"
+}
