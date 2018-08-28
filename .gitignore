@@ -5,11 +5,18 @@
 !.vscode/launch.json
 !.vscode/extensions.json
 
-### Node ###
+### Dependencies ###
 node_modules
 
+### Build folders ###
 build
+
+### Empty folders ###
+mongodb/*
 
 ### Logs ###
 yarn-debug.log*
 yarn-error.log*
+
+### Force to track .gitkeep files ###
+!.gitkeep

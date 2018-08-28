@@ -5,5 +5,10 @@
   "main": "index.js",
   "repository": "https://github.com/m-sz/tvcast-service.git",
   "author": "Maciej Szmida <maciej_szmida@epam.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "compose:down": "docker-compose down",
+    "compose:up:dev": "yarn run compose:down && docker-compose -f docker-compose.yml -f services/scraper-svc/docker-compose.dev.yml up --build --force-recreate",
+    "compose:up:prod": "yarn run compose:down && docker-compose -f docker-compose.yml -f services/scraper-svc/docker-compose.prod.yml up -d --build --force-recreate"
+  }
 }

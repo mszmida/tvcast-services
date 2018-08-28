@@ -11,10 +11,8 @@
     "lint:watch": "chokidar \"src/**/*.ts\" --command \"yarn run lint --force\" --initial --verbose --ignore \"node_modules\"",
     "build": "yarn run lint && tsc",
     "start": "node build/index.js",
-    "start-dev": "concurrently --names \"lint,nodemon\" --prefix \"{name}-{pid}\" \"yarn run lint:watch\" \"nodemon\""
-  },
-  "dependencies": {
-    "typescript": "^3.0.1"
+    "start:dev": "concurrently --names \"lint,nodemon\" --prefix \"{name}-{pid}\" \"yarn run lint:watch\" \"nodemon\"",
+    "container:start:dev": "nodemon --legacy-watch"
   },
   "devDependencies": {
     "chokidar-cli": "^1.2.0",
@@ -22,6 +20,7 @@
     "nodemon": "^1.18.3",
     "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
-    "tslint-config-airbnb": "^5.10.0"
+    "tslint-config-airbnb": "^5.10.0",
+    "typescript": "^3.0.1"
   }
 }

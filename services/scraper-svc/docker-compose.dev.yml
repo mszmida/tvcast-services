@@ -1,0 +1,22 @@
+version: '3.7'
+services:
+  tv-cast-mongo:
+    volumes:
+      - type: volume
+        source: tv-cast-mongo-data
+        target: /data/db
+    ports:
+      - "27017:27017"
+
+  scraper-svc:
+    build:
+      target: builder
+    env_file: ./services/scraper-svc/config.dev.env
+    volumes:
+      - type: bind
+        source: ./services/scraper-svc/src
+        target: /app/src
+    command: "yarn run container:start:dev"
+
+volumes:
+  tv-cast-mongo-data:

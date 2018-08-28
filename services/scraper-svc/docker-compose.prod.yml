@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  tv-cast-mongo:
+    restart: always
+    volumes:
+      - type: bind
+        source: ./mongodb
+        target: /data/db
+    expose:
+      - "27017"
+
+  scraper-svc:
+    restart: always
+    env_file: ./services/scraper-svc/config.prod.env

@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  tv-cast-mongo:
+    image: mongo:3.6.7-jessie
+    command: mongod --port 27017 --smallfiles
+
+  scraper-svc:
+    build:
+      context: ./services/scraper-svc
+    depends_on:
+      - tv-cast-mongo
